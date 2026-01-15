@@ -1,0 +1,146 @@
+@use "../abstracts/variables" as *;
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16rem 10%;
+    gap: 0.8rem;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(../../img/Pattern.svg);
+        inset: 0;
+        background-position: right center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: -10;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            .heading{
+                width: auto;
+                padding-right: 20rem;
+            }
+        }
+
+        &-cta {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 76.3rem;
+            gap: 3.2rem;
+            background-color: #fff;
+            border: 0.1rem solid $color-dark-100;
+
+            &__location {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .bg-icon {
+                    background-color: $color-lavender-100;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0;
+                }
+                .icon {
+                    width: 2rem;
+                }
+
+                .title-cta {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+
+                .text-cta {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
+            }
+
+            &__price {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .icon {
+                    width: 2rem;
+                }
+
+                .title-cta {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+
+                .text-cta {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
+            }
+
+            &__property {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .icon {
+                    width: 2rem;
+                }
+
+                .title-cta {
+                    font-size: 1.4rem;
+                    line-height: 2.4rem;
+                }
+
+                .text-cta {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+
+    &__right {
+        
+        &-ilustration-1 {
+            .picture {
+                width: 24rem;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-ilustration-2 {
+            .picture {
+                width: 24rem;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-ilustration-3 {
+            .picture {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
