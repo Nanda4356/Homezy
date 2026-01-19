@@ -1,0 +1,19 @@
+.benefits {
+    &__heading {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6.4rem;
+        margin: 0 auto;
+        padding: 16rem 6% 16rem 13%;
+    }
+
+    .sub-heading{
+        max-width: 75rem;
+        width: 100%;
+        display: block;
+        padding-left: 30rem;
+    }
+}
