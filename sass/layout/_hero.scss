@@ -37,10 +37,9 @@
         line-height: 1.2;
       }
 
-      .sub-heading{
+      .sub-heading {
         max-width: 50rem;
       }
-
     }
 
     &-cta {
@@ -51,8 +50,8 @@
       padding: 2rem;
       border-radius: 1.5rem;
       background-color: #fff;
-      border: .1rem solid $color-dark-100;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+      border: 0.1rem solid $color-dark-100;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 
       .icon-wrapper {
         width: 4rem;
@@ -103,7 +102,7 @@
 
       .house-wrapper {
         height: 25.6rem;
-        border: .3rem solid $color-dark-100;
+        border: 0.3rem solid $color-dark-100;
         border-radius: 4rem 4rem 3.2rem 0;
         overflow: hidden;
 
@@ -123,7 +122,7 @@
         color: #fff;
         clip-path: polygon(0 12%, 90% 11%, 100% 0, 100% 100%, 75% 100%, 48% 100%, 0 100%);
         border-radius: 0 0 4rem 4rem;
-        border: .3rem solid $color-lavender-60;
+        border: 0.3rem solid $color-lavender-60;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -148,36 +147,48 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: .4rem;
+      gap: 0.4rem;
       background-color: #fff;
-      border: .3rem solid $color-dark-100;
+      border: 0.3rem solid $color-dark-100;
       border-radius: 3.6rem;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, .12);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
       z-index: 10;
 
-      .element{
+      .element {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: self-start;
-        gap: .8rem;
+        gap: 0.8rem;
 
-        &__text{
+        &__text {
           display: flex;
           flex-direction: column;
 
-          .heading{
+          .heading {
             font-size: 1.65rem;
           }
         }
 
-        &__icon{
-          display: inline-flex;
-          gap: .8rem;
+        &__icon {
+          display: flex;
+          gap: 0.8rem;
 
-          .icon-social{
-            width: 2rem;
-            height: 2rem;
+          .icon-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-dark-80;
+            border-radius: 50%;
+            padding: 0.5rem;
+
+            .icon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 1.5rem;
+              height: 1.5rem;
+            }
           }
         }
       }
@@ -201,7 +212,7 @@
       height: 34rem;
       overflow: hidden;
       border-radius: 4rem;
-      border: .3rem solid $color-dark-100;
+      border: 0.3rem solid $color-dark-100;
       z-index: 1;
 
       .picture {

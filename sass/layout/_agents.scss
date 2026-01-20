@@ -1,0 +1,104 @@
+@use "../abstracts/variables" as *;
+
+.agents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 13% 5rem 13%;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .heading {
+            font-family: "Syne", sans-serif;
+        }
+
+        .paragraph {
+            text-decoration: none;
+            color: $color-dark-100;
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        padding: 5rem 0 10rem 0;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
+        grid-template-rows: 1fr;
+        gap: 4rem;
+
+        &-item {
+            gap: 4rem;
+            position: relative;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            border: 0.2rem solid $color-lavender-20;
+            grid-column: 1fr;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            padding: 2rem;
+
+
+            .content-left{
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+
+                .heading{
+                    font-family: "Syne", sans-serif;
+                }
+
+                .icon{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: .5rem;
+                    
+                    &-wrapper{
+                        padding: .5rem;
+                        display: flex;
+                        background: $color-dark-100;
+                        border-radius: 50%;
+
+                        .icon-social{
+                            display: block;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .content-right{
+                background: $color-carnation-40;
+                border-radius: 1.5rem;
+                
+                .picture{
+                    max-width: 10rem;
+                    object-fit: cover;
+                    min-width: 0;
+                    border-bottom-left-radius: 1.5rem;
+                    border-bottom-right-radius: 1.5rem;
+                    width: 100%;
+                    height: auto;
+                    object-position: top;
+                    aspect-ratio: 1/1;
+                    display: block;
+                }
+            }
+        }
+    }
+}

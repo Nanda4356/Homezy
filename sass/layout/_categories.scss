@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as *;
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 13% 8rem 13%;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .heading {
+            font-family: "Syne", sans-serif;
+        }
+
+        .paragraph {
+            text-decoration: none;
+            color: $color-dark-100;
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        padding: 5rem 0 10rem 0;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-rows: 1fr;
+        gap: 4rem;
+        
+        &-item {
+            gap: 4rem;
+            position: relative;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            border: 0.2rem solid $color-lavender-20;
+            grid-column: 1fr;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            
+            .content {
+                display: flex;
+                justify-content: space-between;
+                margin: 2rem;
+
+                &__text {
+                    display: flex;
+                    gap: 2rem;
+
+                    .icon {
+                        background-color: $color-lavender-40;
+                        padding: 1.5rem;
+                        border-radius: 1.5rem;
+                    }
+
+                    .text-wrapper {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 0.2rem;
+                    }
+                    .heading {
+                        font-family: "Syne", sans-serif;
+                    }
+                }
+
+                &__button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    gap: .5rem;
+                    color: $color-dark-100;
+                    
+                    .send{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                       
+                    }
+                }
+            }
+        }
+    }
+}

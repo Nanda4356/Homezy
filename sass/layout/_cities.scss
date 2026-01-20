@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as *;
+
+.cities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 13% 5rem 13%;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+    .heading {
+        font-family: "Syne", sans-serif;
+    }
+
+    .paragraph {
+        text-decoration: none;
+        color: $color-dark-100;
+    }
+
+    }
+
+    &__content {
+        max-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        padding: 5rem 0 10rem 0;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-rows: 1fr;
+        gap: 4rem;
+
+        &-item {
+            gap: 4rem;
+            position: relative;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            border: 0.2rem solid $color-lavender-20;
+            grid-column: 1fr;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .cities-img{
+                width: 100%;
+                border-top-left-radius: 1.5rem;
+                border-top-right-radius: 1.5rem;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+                
+                overflow: hidden;
+            }
+
+            .text-wrapper{
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                .listings{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    color: $color-dark-60;
+                }
+            }
+        }
+    }
+}

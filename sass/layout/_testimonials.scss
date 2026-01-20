@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.testimonials {
+    position: relative;
+    padding: 0 0 5rem 13%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            background-color: #fff;
+            padding: 5rem;
+
+            &-stars {
+                display: flex;
+                gap: 1rem;
+                .star {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                }
+            }
+
+            &-paragraph {
+                .paragraph {
+                    color: $color-dark-60;
+                    width: 38rem;
+                    display: block;
+                }
+            }
+
+            &-profile {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
