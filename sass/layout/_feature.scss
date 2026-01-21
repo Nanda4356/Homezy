@@ -25,11 +25,11 @@
         max-width: 100%;
         width: 100%;
         padding: 0 13% 0 13%;
-        height: auto;
+        height: 100%;
         box-sizing: border-box;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
         grid-template-rows: 1fr 1fr;
         gap: 4rem;
 
@@ -126,7 +126,9 @@
                     }
                 }
                 .main-text {
-                    margin-top: 3rem;
+                    display: flex;
+                    flex-direction: column;
+                    
                     &__heading {
                         margin-bottom: 3rem;
                         .heading {
@@ -218,7 +220,7 @@
                 position: absolute;
                 width: 100%;
                 box-sizing: border-box;
-                top: 42.5%;
+                top: 40%;
                 left: -0.9rem;
             }
 

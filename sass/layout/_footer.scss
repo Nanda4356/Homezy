@@ -1,0 +1,157 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    margin: 0 auto;
+
+    &__content {
+        max-width: 100%;
+        width: 100%;
+        padding: 5rem 10% 0 10%;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-rows: 1fr;
+        gap: 4rem;
+
+        .item-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            grid-column: 1 / span 2;
+
+            .footer-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                &__logo {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .logo {
+                        max-width: 3.5rem;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .heading {
+                        font-family: "Syne", sans-serif;
+                    }
+                }
+
+                &__paragraph {
+                    max-width: 30rem;
+                    width: 100%;
+
+                    .paragraph {
+                        font-weight: 300;
+                    }
+                }
+                &__social {
+                    display: flex;
+                    gap: 2rem;
+
+                    .icon-social {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $color-dark-100;
+                        padding: 1rem;
+                        border-radius: 50%;
+
+                        .icon {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        &-item {
+            border-radius: 1.5rem;
+            grid-column: 1fr;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            padding: 2rem;
+
+            .footer-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                &__list {
+                    display: flex;
+                    justify-content: center;
+                    gap: 5rem;
+
+                    .footer-navigation {
+                        a,
+                        a:link,
+                        a:visited {
+                            text-decoration: none;
+                            color: $color-dark-100;
+                            font-weight: 400;
+                            font-size: 1.6rem;
+                            line-height: 100%;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: $color-lavender-80;
+                            }
+
+                            &:active,
+                            &:focus {
+                                color: $color-lavender-80;
+                            }
+                        }
+                    }
+
+                    .nav-left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+                    .nav-right {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .item-2 {
+            grid-column: 3 / span 2;
+        }
+
+        .item-3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .item-4 {
+            display: flex;
+            justify-content: center;
+            grid-column: 1 / -1;
+            border-top: 1px solid $color-dark-60;
+
+            .copyright {
+                padding-top: 2rem;
+            }
+        }
+    }
+}

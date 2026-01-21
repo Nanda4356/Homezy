@@ -1,9 +1,9 @@
 @use "../abstracts/variables" as *;
 
-.btn{
+.btn {
     text-decoration: none;
     border-radius: 1.5rem;
-    padding: 1.6rem 3.2rem;
+    padding: 1.5rem 3rem;
     font-weight: bold;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -11,49 +11,57 @@
 
 .btn-primary,
 .btn-primary:link,
-.btn-primary:visited{
+.btn-primary:visited {
     color: $color-dark-100;
-    border: .1rem solid $color-dark-100;
+    border: 0.1rem solid $color-dark-100;
     background-color: transparent;
     font-weight: bold;
-    gap: .8rem;
-    transition: all .3s;
+    gap: 0.8rem;
+    transition: all 0.3s;
 
-    &:hover{
+    &:hover {
         background-color: $color-lavender-20;
-        border: .1rem solid $color-lavender-100;
+        border: 0.1rem solid $color-lavender-100;
     }
 
     &:active,
-    &:focus{
+    &:focus {
         background-color: $color-lavender-20;
-        border: .1rem solid $color-lavender-100;
+        border: 0.1rem solid $color-lavender-100;
     }
 }
 
-.btn-secondary{
+.btn-secondary {
     text-decoration: none;
     color: #fff;
-    border: .1rem solid $color-dark-100;
+    border: 0.1rem solid $color-dark-100;
     border-radius: 1.5rem;
-    padding: 1.6rem 3.2rem;
+    padding: 1.5rem 3rem;
     background-color: $color-dark-100;
     font-weight: bold;
     font-size: 1.6rem;
     line-height: 2rem;
-    gap: .8rem;
-    transition: all .3s;
+    gap: 0.8rem;
+    transition: all 0.3s;
 
-    &:hover{
+    &:hover {
         background-color: transparent;
-        border: .1rem solid $color-dark-100;
+        border: 0.1rem solid $color-dark-100;
         color: $color-dark-100;
     }
 
     &:active,
-    &:focus{
+    &:focus {
         background-color: transparent;
-        border: .1rem solid $color-dark-100;
+        border: 0.1rem solid $color-dark-100;
         color: $color-dark-100;
+    }
+}
+
+.link{
+    color: $color-dark-100;
+
+    &:hover{
+        color: orangered;
     }
 }
