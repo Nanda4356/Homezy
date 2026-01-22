@@ -1,63 +1,272 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
-.navigation{
+.navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2.4rem 20rem;
+    justify-content: space-between;
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 50;
-    
+
+    padding: 2rem 13% 1rem 13%;
     background-color: $background-color;
 
-    &__icon{
+    .btn-nonlist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    #sidebar-active {
+        display: none;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: 0 20px;
+        display: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .navigation-icon {
         display: flex;
         align-items: center;
-        gap: .8rem;
+        gap: 0.8rem;
         text-decoration: none;
         color: $color-dark-100;
         font-family: "Syne", sans-serif;
 
-        .text{
+        .text {
             font-weight: 600;
             display: flex;
-            flex-direction: row;
         }
-
     }
 
-    &__list{
+    &__list {
         list-style: none;
         display: flex;
+        align-items: center;
         gap: 6.4rem;
 
-        &-item{
+        .navigation-icon-list {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-decoration: none;
+            color: $color-dark-100;
+            font-family: "Syne", sans-serif;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: flex;
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+
+            .text-list {
+                font-weight: 600;
+                display: flex;
+            }
+        }
+
+        .label {
+            display: none;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            position: fixed;
+            padding: 5rem;
+            top: 0;
+            right: -100%;
+            z-index: 100;
+            width: 50%;
+            height: 100%;
+            transition: right 0.7s;
+
+            background-color: $color-lavender-20;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
+
+        &-item {
+            position: relative;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            width: 100%;
+
+            @media only screen and (max-width: $bp-medium) {
+                justify-content: flex-start;
+                border-bottom: 2px solid $color-lavender-40;
+                padding: 2rem 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             a,
             a:link,
-            a:visited{
+            a:visited {
                 text-decoration: none;
                 color: $color-dark-100;
                 font-weight: 400;
-                font-size: 1.6rem;
+                font-size: 1.8rem;
                 line-height: 100%;
-                transition: all .3s;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
 
-                &:hover{
+                &:hover,
+                &:focus,
+                &:active {
                     color: $color-lavender-80;
                 }
 
-                &:active,
-                &:focus{
-                    color: $color-lavender-80;
+                @media only screen and (max-width: $bp-medium) {
+                    font-size: 2rem;
                 }
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 2.8rem;
+                }
+            }
+
+            .dropdown-toggle {
+                display: none;
+            }
+
+            .dropdown-label {
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+                gap: 0.5rem;
+                cursor: pointer;
+                width: 100%;
+
+                &,
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: $color-dark-100;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 100%;
+                    transition: all 0.3s;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $color-lavender-80;
+                    }
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                    font-size: 3rem;
+                }
+            }
+
+            .arrow {
+                display: flex;
+                transition: transform 0.4s ease;
+            }
+
+            .dropdown__wrapper {
+                position: absolute;
+                top: 120%;
+                left: 0;
+
+                display: none;
+                transform: translateY(1rem);
+                pointer-events: none;
+                transition: all 0.4s ease;
+
+                @media only screen and (max-width: $bp-medium) {
+                    position: static;
+                    transform: none;
+                    width: 100%;
+                }
+            }
+
+            .dropdown__list {
+                display: flex;
+                gap: 2rem;
+                width: 50rem;
+                margin-top: 2.2rem;
+                padding: 4rem;
+                border-radius: 2rem;
+                background-color: #fff;
+                box-shadow: 0 0 0.5rem $color-dark-20;
+
+                @media only screen and (max-width: $bp-medium) {
+                    width: 100%;
+                    flex-direction: column;
+                    margin-top: 1.5rem;
+                }
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 2rem;
+                }
+            }
+
+            .dropdown-toggle:checked ~ .dropdown__wrapper {
+                display: block;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .dropdown-toggle:checked + .dropdown-label .arrow {
+                transform: rotate(180deg);
+            }
+        }
+
+        .btn-list {
+            display: none;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
 
+    #sidebar-active:checked ~ .navigation__list {
+        @media only screen and (max-width: $bp-medium) {
+            right: 0;
+        }
+    }
 }

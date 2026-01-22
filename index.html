@@ -18,21 +18,82 @@
 </head>
 
 <body>
-    <div class="navigation">
-        <a href="index.html" class="navigation__icon">
-            <img src="img/logo.svg" alt="Homezy logo" class="logo">
-            <span class="text heading-6">Homezy</span>
-        </a>
+    <nav class="navigation">
+
         <div class="header__navigation">
-            <ul class="navigation__list">
-                <li class="navigation__list-item"><a href="#">Home</a></li>
-                <li class="navigation__list-item"><a href="#">Properties</a></li>
-                <li class="navigation__list-item"><a href="#">Agents</a></li>
-                <li class="navigation__list-item"><a href="#">Pages</a></li>
-            </ul>
+            <a href="index.html" class="navigation-icon">
+                <img src="img/logo.svg" alt="Homezy logo" class="logo">
+                <span class="text heading-5">Homezy</span>
+            </a>
         </div>
-        <a href="#" class="btn btn-primary">Contact Us</a>
-    </div>
+        <div>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="label">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                    fill="#1f1f1f" class="open-sidebar-button">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
+<ul class="navigation__list">
+
+    <label for="sidebar-active" class="label">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+            class="close-sidebar-button">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+
+        <a href="index.html" class="navigation-icon-list">
+            <img src="img/logo.svg" alt="Homezy logo" class="logo">
+            <span class="text-list heading-5">Homezy</span>
+        </a>
+    </label>
+
+    <li class="navigation__list-item"><a href="#">Home</a></li>
+    <li class="navigation__list-item"><a href="#">Properties</a></li>
+    <li class="navigation__list-item"><a href="#">Agents</a></li>
+
+    <li class="navigation__list-item nav-dropdown">
+
+        <input type="checkbox" id="drop-pages" class="dropdown-toggle">
+
+        <label for="drop-pages" class="dropdown-label">
+            Pages
+            <img src="img/arrow-down.svg" alt="Arrow down" class="arrow">
+        </label>
+
+        <div class="dropdown__wrapper">
+            <div class="dropdown__list">
+                <div class="dropdown__list-item">
+                    <p><a href="#">Home V1</a></p>
+                    <p><a href="#">Home V2</a></p>
+                    <p><a href="#">Search Properties V1</a></p>
+                    <p><a href="#">Search Properties V2</a></p>
+                    <p><a href="#">Property Details V1</a></p>
+                    <p><a href="#">Property Details V2</a></p>
+                    <p><a href="#">Agent List V1</a></p>
+                    <p><a href="#">Agent List V2</a></p>
+                </div>
+                <div class="dropdown__list-item">
+                    <p><a href="#">Agent Details V1</a></p>
+                    <p><a href="#">Agent Details V2</a></p>
+                    <p><a href="#">About Us V1</a></p>
+                    <p><a href="#">About Us V2</a></p>
+                    <p><a href="#">Contact Us V1</a></p>
+                    <p><a href="#">Contact Us V2</a></p>
+                    <p><a href="#">FAQ</a></p>
+                </div>
+            </div>
+        </div>
+    </li>
+    <a href="#" class="btn btn-list btn-primary">Contact Us</a>
+</ul>
+
+        </div>
+        <a href="#" class="btn-nonlist btn btn-primary">Contact Us</a>
+    </nav>
+
+
     <main>
         <header class="hero">
             <div class="hero__left">
@@ -47,30 +108,32 @@
                         <div class="icon-wrapper">
                             <img src="img/location-fill.svg" alt="Location icon" class="icon" />
                         </div>
-                        <div>
-                            <span class="paragraph-small">Location</span> <br>
-                            <span class="paragraph-small--bold">California, US</span>
+                        <div class="text-wrapper">
+                            <span class="heading paragraph-small">Location</span> <br>
+                            <span class="paragraph paragraph-small--bold">California, US</span>
                         </div>
                     </div>
                     <div class="hero__left-cta__price">
                         <div class="icon-wrapper">
                             <img src="img/dollar-square.svg" alt="Price icon" class="icon" />
                         </div>
-                        <div>
-                            <span class="paragraph-small">Price</span> <br>
-                            <span class="paragraph-small--bold">$1500-$2500</span>
+                        <div class="text-wrapper">
+                            <span class="heading paragraph-small">Price</span> <br>
+                            <span class="paragraph paragraph-small--bold">$1500-$2500</span>
                         </div>
                     </div>
                     <div class="hero__left-cta__property">
                         <div class="icon-wrapper">
                             <img src="img/house-bold.svg" alt="Property icon" class="icon">
                         </div>
-                        <div>
-                            <span class="paragraph-small">Type of Property</span> <br>
-                            <span class="paragraph-small--bold">Apartement</span>
+                        <div class="text-wrapper">
+                            <span class="heading paragraph-small">Type of Property</span> <br>
+                            <span class="paragraph paragraph-small--bold">Apartement</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-secondary">Browse</a>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn btn-secondary">Browse</a>
+                    </div>
                 </div>
             </div>
             <div class="hero__right">
@@ -821,6 +884,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
 
 </body>
 
