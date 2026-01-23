@@ -1,8 +1,10 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
 .cta {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 13% 5rem 13%;
@@ -17,22 +19,37 @@
         padding: 5rem;
         gap: 2rem;
         border: 1px solid $color-dark-100;
+        position: relative;
+
+        @media only screen and (max-width: $bp-small) {
+            width: auto;
+            height: auto;
+            padding-bottom: 30rem;
+            overflow: hidden;
+        }
 
         &::before {
             content: "";
             position: absolute;
             top: 0;
-            right: 10%;
+            right: 0;
             bottom: 0;
-            width: 35%;
+            width: 55%;
 
             background-image: url("../../img/pattern-white.svg");
-            background-position: center right;
+            background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
 
             pointer-events: none;
-            z-index: -1;
+            z-index: 1;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 150%;
+                top: 0;
+                right: 0;
+                bottom: -50rem;
+            }
         }
 
         &-text {
@@ -41,6 +58,7 @@
             max-width: 40rem;
             width: 100%;
             gap: 2rem;
+            z-index: 2;
 
             .heading {
                 font-family: "Syne", sans-serif;
@@ -53,7 +71,7 @@
             }
         }
 
-        &-form{
+        &-form {
             display: flex;
             justify-content: space-between;
             padding: 1.5rem;
@@ -63,7 +81,19 @@
             background-color: #fff;
             border: 1px solid $color-lavender-40;
 
-            .input{
+            z-index: 2;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1.5rem;
+                background-color: transparent;
+                border: none;
+            }
+
+            .input {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -75,11 +105,22 @@
                 width: 100%;
                 padding-right: 2rem;
 
-                &::placeholder{
-                    color: $color-dark-20;
+                @media only screen and (max-width: $bp-small) {
+                    padding: 3rem;
+                    width: 100%;
+                    background-color: #fff;
+                    border: 1px solid $color-lavender-40;
+                    border-radius: 1.5rem;
                 }
 
-                &:focus{
+                &::placeholder {
+                    color: $color-dark-20;
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 2rem;
+                    }
+                }
+
+                &:focus {
                     outline: none;
                 }
             }

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
 .categories {
     display: flex;
@@ -8,10 +9,21 @@
     margin: 0 auto;
     padding: 0 13% 8rem 13%;
 
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 8% 0 8%;
+    }
+
     &__heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
 
         .heading {
             font-family: "Syne", sans-serif;
@@ -20,11 +32,13 @@
         .paragraph {
             text-decoration: none;
             color: $color-dark-100;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2.5rem;
+            }
         }
     }
 
     &__content {
-        max-width: 100%;
         max-width: 100%;
         width: 100%;
         padding: 5rem 0 10rem 0;
@@ -35,7 +49,11 @@
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
-        
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        }
+
         &-item {
             gap: 4rem;
             position: relative;
@@ -46,11 +64,11 @@
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            
+
             .content {
                 display: flex;
                 justify-content: space-between;
-                margin: 2rem;
+                padding: 1.5rem;
 
                 &__text {
                     display: flex;
@@ -60,6 +78,15 @@
                         background-color: $color-lavender-40;
                         padding: 1.5rem;
                         border-radius: 1.5rem;
+
+                        &-icon {
+                            max-width: 4rem;
+                            width: 100%;
+
+                            @media only screen and (max-width: $bp-large) {
+                                max-width: 3.7rem;
+                            }
+                        }
                     }
 
                     .text-wrapper {
@@ -71,6 +98,16 @@
                     }
                     .heading {
                         font-family: "Syne", sans-serif;
+
+                        @media only screen and (max-width: $bp-large) {
+                            font-size: 2.2rem;
+                        }
+                    }
+
+                    .listings {
+                        @media only screen and (max-width: $bp-large) {
+                            font-size: 1.8rem;
+                        }
                     }
                 }
 
@@ -81,14 +118,22 @@
                     text-decoration: none;
                     font-size: 1.6rem;
                     font-weight: 400;
-                    gap: .5rem;
+                    gap: 0.5rem;
                     color: $color-dark-100;
-                    
-                    .send{
+
+                    @media only screen and (max-width: $bp-large) {
+                        font-size: 2rem;
+                    }
+
+                    .send {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                       
+
+                        @media only screen and (max-width: $bp-large) {
+                            max-width: 3rem;
+                            width: 100%;
+                        }
                     }
                 }
             }

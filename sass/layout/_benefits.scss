@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
 .benefits {
     display: flex;
@@ -6,6 +7,10 @@
     justify-content: center;
     align-items: center;
     padding: 16rem 13% 5rem 13%;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 17rem 8% 5rem 8%;
+    }
 
     &__heading {
         width: 100%;
@@ -17,7 +22,14 @@
         margin: 0 auto;
         gap: 20rem;
 
-        .heading{
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .heading {
             font-family: "Syne", sans-serif;
         }
 
@@ -25,6 +37,10 @@
             max-width: 45rem;
             width: 100%;
             display: block;
+
+            @media only screen and (max-width: $bp-small) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -36,7 +52,7 @@
         box-sizing: border-box;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
 
@@ -55,14 +71,16 @@
             height: auto;
             box-sizing: border-box;
             padding: 3.5rem;
-            aspect-ratio: 86 / 88;
-
-            
 
             .icon {
                 background: $color-lavender-40;
                 padding: 2rem;
                 border-radius: 1.5rem;
+
+                &_icon {
+                    width: 100%;
+                    max-width: 3.8rem;
+                }
             }
 
             .text {
@@ -78,7 +96,7 @@
                     font-family: "Syne", sans-serif;
                 }
 
-                .paragraph{
+                .paragraph {
                     color: $color-dark-60;
                     font-weight: 300;
                 }

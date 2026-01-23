@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
 .agents {
     display: flex;
@@ -13,6 +14,13 @@
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
         .heading {
             font-family: "Syne", sans-serif;
         }
@@ -20,6 +28,10 @@
         .paragraph {
             text-decoration: none;
             color: $color-dark-100;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2.5rem;
+            }
         }
     }
 
@@ -50,42 +62,89 @@
             gap: 0.5rem;
             padding: 2rem;
 
-
-            .content-left{
+            .content-left {
                 display: flex;
                 flex-direction: column;
                 gap: 2.5rem;
 
-                .heading{
-                    font-family: "Syne", sans-serif;
-                }
+                .text-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    @media only screen and (max-width: $bp-small) {
+                        gap: 1.5rem;
+                    }
+                    .heading {
+                        font-family: "Syne", sans-serif;
 
-                .icon{
+                        @media only screen and (max-width: $bp-largest) {
+                            font-size: 2.4rem;
+                        }
+                        @media only screen and (max-width: $bp-large) {
+                            font-size: 2rem;
+                        }
+                        @media only screen and (max-width: $bp-small) {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .paragraph {
+                        @media only screen and (max-width: $bp-largest) {
+                            font-size: 2rem;
+                        }
+                        @media only screen and (max-width: $bp-large) {
+                            font-size: 1.8rem;
+                        }
+                        @media only screen and (max-width: $bp-large) {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+                .icon {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: .5rem;
-                    
-                    &-wrapper{
-                        padding: .5rem;
+                    gap: 0.5rem;
+                    width: 100%;
+
+                    &-wrapper {
+                        padding: 0.7rem;
                         display: flex;
                         background: $color-dark-100;
                         border-radius: 50%;
 
-                        .icon-social{
+                        @media only screen and (max-width: $bp-small) {
+                            padding: 1rem;
+                        }
+
+                        .icon-social {
                             display: block;
-                            width: 1.2rem;
-                            height: 1.2rem;
+                            width: 1.5rem;
+                            height: 1.5rem;
+
+                            @media only screen and (max-width: $bp-largest) {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+
+                            @media only screen and (max-width: $bp-large) {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+
+                            @media only screen and (max-width: $bp-small) {
+                                width: 2rem;
+                                height: 2rem;
+                            }
                         }
                     }
                 }
             }
 
-            .content-right{
+            .content-right {
                 background: $color-carnation-40;
                 border-radius: 1.5rem;
-                
-                .picture{
+
+                .picture {
                     max-width: 10rem;
                     object-fit: cover;
                     min-width: 0;
@@ -96,6 +155,14 @@
                     object-position: top;
                     aspect-ratio: 1/1;
                     display: block;
+
+                    @media only screen and (max-width: $bp-largest) {
+                        max-width: 13rem;
+                    }
+
+                    @media only screen and (max-width: $bp-small) {
+                        max-width: 15rem;
+                    }
                 }
             }
         }
