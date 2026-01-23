@@ -27,6 +27,9 @@
 
         .heading {
             font-family: "Syne", sans-serif;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 5rem;
+            }
         }
 
         .paragraph {
@@ -34,7 +37,7 @@
             color: $color-dark-100;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
         }
     }
@@ -80,7 +83,6 @@
                 overflow: hidden;
 
                 @media only screen and (max-width: $bp-small) {
-                    
                 }
             }
 

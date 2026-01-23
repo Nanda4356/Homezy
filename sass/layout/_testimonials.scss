@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../base/base" as *;
 
 .testimonials {
     position: relative;
@@ -8,11 +9,19 @@
     flex-direction: column;
     gap: 6rem;
 
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 8% 5rem 8%;
+    }
+
     &__heading {
         display: flex;
         justify-content: center;
         width: 100%;
         margin: 0 auto;
+
+        .heading {
+            font-size: 5rem;
+        }
     }
 
     &__content {
@@ -20,6 +29,10 @@
         align-items: center;
         gap: 4rem;
         width: 100%;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
 
         .swiper {
             display: flex;
@@ -41,6 +54,9 @@
             gap: 5rem;
             background-color: #fff;
             padding: 5rem;
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+            }
 
             &-stars {
                 display: flex;
@@ -48,6 +64,11 @@
                 .star {
                     width: 1.7rem;
                     height: 1.7rem;
+
+                    @media only screen and (max-width: $bp-small) {
+                        width: 3rem;
+                        height: 3rem;
+                    }
                 }
             }
 
@@ -56,12 +77,37 @@
                     color: $color-dark-60;
                     width: 38rem;
                     display: block;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 3rem;
+                        width: 100%;
+                        line-height: 1.5;
+                    }
                 }
             }
 
             &-profile {
                 display: flex;
                 justify-content: space-between;
+
+                .text-wrapper {
+                    @media only screen and (max-width: $bp-small) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3.5rem;
+                    }
+                    .name {
+                        @media only screen and (max-width: $bp-small) {
+                            font-size: 4rem;
+                        }
+                    }
+
+                    .position {
+                        @media only screen and (max-width: $bp-small) {
+                            font-size: 3rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -72,13 +118,17 @@
         align-items: center;
         gap: 5rem;
 
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+
         &-item {
             background-color: $color-dark-100;
             padding: 1.5rem;
             border-radius: 1.5rem;
-            transition: all .2s;
+            transition: all 0.2s;
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
                 background-color: $color-dark-20;
             }

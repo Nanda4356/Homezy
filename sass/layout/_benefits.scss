@@ -31,6 +31,10 @@
 
         .heading {
             font-family: "Syne", sans-serif;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 5rem;
+            }
         }
 
         .sub-heading {
@@ -40,6 +44,8 @@
 
             @media only screen and (max-width: $bp-small) {
                 max-width: 100%;
+                font-size: 3rem;
+                line-height: 1.5;
             }
         }
     }
@@ -72,14 +78,26 @@
             box-sizing: border-box;
             padding: 3.5rem;
 
+            @media only screen and (max-width: $bp-small) {
+                padding: 5rem 10rem 10rem 5rem;
+                gap: 10rem;
+            }
+
             .icon {
                 background: $color-lavender-40;
                 padding: 2rem;
                 border-radius: 1.5rem;
+                @media only screen and (max-width: $bp-small) {
+                    padding: 4rem;
+                }
 
                 &_icon {
                     width: 100%;
                     max-width: 3.8rem;
+
+                    @media only screen and (max-width: $bp-small) {
+                        max-width: 10rem;
+                    }
                 }
             }
 
@@ -92,13 +110,26 @@
                 line-height: 1.6;
                 gap: 1rem;
 
+                @media only screen and (max-width: $bp-small) {
+                    max-width: 100ch;
+                }
+
                 .heading {
                     font-family: "Syne", sans-serif;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 4rem;
+                    }
                 }
 
                 .paragraph {
                     color: $color-dark-60;
                     font-weight: 300;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 3rem;
+                        line-height: 1.5;
+                    }
                 }
             }
         }

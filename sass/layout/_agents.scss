@@ -6,8 +6,11 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
     padding: 0 13% 5rem 13%;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 8% 5rem 8%;
+    }
 
     &__heading {
         display: flex;
@@ -23,6 +26,9 @@
 
         .heading {
             font-family: "Syne", sans-serif;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 5rem;
+            }
         }
 
         .paragraph {
@@ -30,7 +36,7 @@
             color: $color-dark-100;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
         }
     }
@@ -46,6 +52,9 @@
         grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
+
+        @media only screen and (max-width: $bp-small) {
+        }
 
         &-item {
             gap: 4rem;
@@ -67,11 +76,16 @@
                 flex-direction: column;
                 gap: 2.5rem;
 
+                @media only screen and (max-width: $bp-small) {
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 .text-wrapper {
                     display: flex;
                     flex-direction: column;
                     @media only screen and (max-width: $bp-small) {
-                        gap: 1.5rem;
+                        gap: 2rem;
                     }
                     .heading {
                         font-family: "Syne", sans-serif;
@@ -83,7 +97,7 @@
                             font-size: 2rem;
                         }
                         @media only screen and (max-width: $bp-small) {
-                            font-size: 3rem;
+                            font-size: 4rem;
                         }
                     }
 
@@ -97,6 +111,9 @@
                         @media only screen and (max-width: $bp-large) {
                             font-size: 2.3rem;
                         }
+                        @media only screen and (max-width: $bp-small) {
+                            font-size: 2.5rem;
+                        }
                     }
                 }
                 .icon {
@@ -106,6 +123,10 @@
                     gap: 0.5rem;
                     width: 100%;
 
+                    @media only screen and (max-width: $bp-small) {
+                        gap: 1.8rem;
+                    }
+
                     &-wrapper {
                         padding: 0.7rem;
                         display: flex;
@@ -113,7 +134,7 @@
                         border-radius: 50%;
 
                         @media only screen and (max-width: $bp-small) {
-                            padding: 1rem;
+                            padding: 1.5rem;
                         }
 
                         .icon-social {
@@ -132,8 +153,8 @@
                             }
 
                             @media only screen and (max-width: $bp-small) {
-                                width: 2rem;
-                                height: 2rem;
+                                width: 2.5rem;
+                                height: 2.5rem;
                             }
                         }
                     }
@@ -161,7 +182,7 @@
                     }
 
                     @media only screen and (max-width: $bp-small) {
-                        max-width: 15rem;
+                        max-width: 20rem;
                     }
                 }
             }

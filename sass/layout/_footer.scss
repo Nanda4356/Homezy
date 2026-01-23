@@ -125,9 +125,11 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-                
-                &__heading{
-                    font-size: 2.5rem;
+
+                &__heading {
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 2.5rem;
+                    }
                 }
 
                 &__list {
@@ -203,6 +205,12 @@
 
             .copyright {
                 padding-top: 2rem;
+
+                .paragraph {
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 2.6rem;
+                    }
+                }
             }
         }
     }

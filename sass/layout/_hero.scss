@@ -107,6 +107,10 @@
         gap: 2rem;
       }
 
+      @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+      }
+
       .icon-wrapper {
         width: 4rem;
         height: 4rem;
@@ -119,6 +123,9 @@
         @media only screen and (max-width: $bp-large) {
           width: 6rem;
           height: 6rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+          padding: 4rem;
         }
       }
 
@@ -146,6 +153,11 @@
             width: 3.5rem;
             height: 3.5rem;
           }
+
+          @media only screen and (max-width: $bp-small) {
+            width: 4rem;
+            height: 4rem;
+          }
         }
       }
 
@@ -156,15 +168,26 @@
           gap: 0.1rem;
         }
 
+        @media only screen and (max-width: $bp-small) {
+          gap: 0.9rem;
+        }
+
         .heading {
           @media only screen and (max-width: $bp-large) {
             font-size: 2.5rem;
+          }
+          @media only screen and (max-width: $bp-small) {
+            font-size: 3rem;
           }
         }
         .paragraph {
           @media only screen and (max-width: $bp-large) {
             font-size: 2.5rem;
             gap: 0.1rem;
+          }
+
+          @media only screen and (max-width: $bp-small) {
+            font-size: 3rem;
           }
         }
       }

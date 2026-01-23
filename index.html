@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Homezy Nanda | Dream Property Made Easy</title>
 </head>
@@ -34,60 +35,60 @@
                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                 </svg>
             </label>
-<ul class="navigation__list">
+            <ul class="navigation__list">
 
-    <label for="sidebar-active" class="label">
-        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
-            class="close-sidebar-button">
-            <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-        </svg>
+                <label for="sidebar-active" class="label">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                        class="close-sidebar-button">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
 
-        <a href="index.html" class="navigation-icon-list">
-            <img src="img/logo.svg" alt="Homezy logo" class="logo">
-            <span class="text-list heading-5">Homezy</span>
-        </a>
-    </label>
+                    <a href="index.html" class="navigation-icon-list">
+                        <img src="img/logo.svg" alt="Homezy logo" class="logo">
+                        <span class="text-list heading-5">Homezy</span>
+                    </a>
+                </label>
 
-    <li class="navigation__list-item"><a href="#">Home</a></li>
-    <li class="navigation__list-item"><a href="#">Properties</a></li>
-    <li class="navigation__list-item"><a href="#">Agents</a></li>
+                <li class="navigation__list-item"><a href="#">Home</a></li>
+                <li class="navigation__list-item"><a href="#">Properties</a></li>
+                <li class="navigation__list-item"><a href="#">Agents</a></li>
 
-    <li class="navigation__list-item nav-dropdown">
+                <li class="navigation__list-item nav-dropdown">
 
-        <input type="checkbox" id="drop-pages" class="dropdown-toggle">
+                    <input type="checkbox" id="drop-pages" class="dropdown-toggle">
 
-        <label for="drop-pages" class="dropdown-label">
-            Pages
-            <img src="img/arrow-down.svg" alt="Arrow down" class="arrow">
-        </label>
+                    <label for="drop-pages" class="dropdown-label">
+                        Pages
+                        <img src="img/arrow-down.svg" alt="Arrow down" class="arrow">
+                    </label>
 
-        <div class="dropdown__wrapper">
-            <div class="dropdown__list">
-                <div class="dropdown__list-item">
-                    <p><a href="#">Home V1</a></p>
-                    <p><a href="#">Home V2</a></p>
-                    <p><a href="#">Search Properties V1</a></p>
-                    <p><a href="#">Search Properties V2</a></p>
-                    <p><a href="#">Property Details V1</a></p>
-                    <p><a href="#">Property Details V2</a></p>
-                    <p><a href="#">Agent List V1</a></p>
-                    <p><a href="#">Agent List V2</a></p>
-                </div>
-                <div class="dropdown__list-item">
-                    <p><a href="#">Agent Details V1</a></p>
-                    <p><a href="#">Agent Details V2</a></p>
-                    <p><a href="#">About Us V1</a></p>
-                    <p><a href="#">About Us V2</a></p>
-                    <p><a href="#">Contact Us V1</a></p>
-                    <p><a href="#">Contact Us V2</a></p>
-                    <p><a href="#">FAQ</a></p>
-                </div>
-            </div>
-        </div>
-    </li>
-    <a href="#" class="btn btn-list btn-primary">Contact Us</a>
-</ul>
+                    <div class="dropdown__wrapper">
+                        <div class="dropdown__list">
+                            <div class="dropdown__list-item">
+                                <p><a href="#">Home V1</a></p>
+                                <p><a href="#">Home V2</a></p>
+                                <p><a href="#">Search Properties V1</a></p>
+                                <p><a href="#">Search Properties V2</a></p>
+                                <p><a href="#">Property Details V1</a></p>
+                                <p><a href="#">Property Details V2</a></p>
+                                <p><a href="#">Agent List V1</a></p>
+                                <p><a href="#">Agent List V2</a></p>
+                            </div>
+                            <div class="dropdown__list-item">
+                                <p><a href="#">Agent Details V1</a></p>
+                                <p><a href="#">Agent Details V2</a></p>
+                                <p><a href="#">About Us V1</a></p>
+                                <p><a href="#">About Us V2</a></p>
+                                <p><a href="#">Contact Us V1</a></p>
+                                <p><a href="#">Contact Us V2</a></p>
+                                <p><a href="#">FAQ</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <a href="#" class="btn btn-list btn-primary">Contact Us</a>
+            </ul>
 
         </div>
         <a href="#" class="btn-nonlist btn btn-primary">Contact Us</a>
@@ -96,7 +97,7 @@
 
     <main>
         <header class="hero">
-            <div class="hero__left">
+            <div class="hero__left" data-aos="fade-right" data-aos-duration="900">
                 <div class="hero__left-text">
                     <div class="heading heading-1">We help people to realize their dream property</div>
                     <div class="sub-heading paragraph-md">We are creative people who provide the best way to you who
@@ -136,7 +137,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero__right">
+            <div class="hero__right" data-aos="fade-left" data-aos-duration="900">
                 <div class="hero__right-ilustration-1">
                     <div class="house-wrapper">
                         <img src="img/home1.jpg" alt="home 1" class="picture">
@@ -177,14 +178,14 @@
         </header>
 
         <section class="featured">
-            <div class="featured__heading">
+            <div class="featured__heading" data-aos="fade-up" data-aos-duration="900">
                 <h1 class="heading heading-3">Featured Listings</h1>
                 <a href="#" class="paragraph paragraph-small--bold">Browse All Featured <span>&rarr;</span></a>
             </div>
 
 
             <div class="featured__card">
-                <div class="featured__card-top">
+                <div class="featured__card-top" data-aos="fade-right" data-aos-duration="900">
                     <div class="featured__card-top-image">
                         <img src="img/home3.jpg" alt="House picture 1" class="picture">
                     </div>
@@ -229,14 +230,14 @@
 
                         <div class="features">
                             <div class="features__item">
-                                <p class="paragraph-small">3 Bedrooms</p>
+                                <p class="heading paragraph-small">Bedrooms</p>
                                 <div class="features__item-icon">
                                     <img src="img/bed.svg" alt="Bed icon" class="icon">
                                     <span class="amount">4</span>
                                 </div>
                             </div>
                             <div class="features__item">
-                                <p class="paragraph-small">Bathrooms</p>
+                                <p class="heading paragraph-small">Bathrooms</p>
                                 <div class="features__item-icon">
                                     <img src="img/bath.svg" alt="Bath icon" class="icon">
                                     <span class="amount">4</span>
@@ -261,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="featured__card-bottom">
+                <div class="featured__card-bottom" data-aos="fade-right" data-aos-duration="900">
                     <div class="featured__card-bottom-image">
                         <img src="img/home1.jpg" alt="House Picture 1" class="picture">
                     </div>
@@ -303,7 +304,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="featured__card-bottom">
+                <div class="featured__card-bottom" data-aos="fade-up" data-aos-duration="900">
                     <div class="featured__card-bottom-image">
                         <img src="img/home4.jpg" alt="House Picture 1" class="picture">
                     </div>
@@ -346,7 +347,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="featured__card-bottom">
+                <div class="featured__card-bottom" data-aos="fade-left" data-aos-duration="900">
                     <div class="featured__card-bottom-image">
                         <img src="img/home2.jpg" alt="House Picture 1" class="picture">
                     </div>
@@ -394,13 +395,13 @@
 
         <section class="benefits">
             <div class="benefits__heading">
-                <div class="heading heading-2">Comfort Is Our Top Priority For You</div>
-                <p class="sub-heading paragraph-md">We guarantee that the products we sell will make our customers
+                <div class="heading heading-2"data-aos="fade-right" data-aos-duration="900">Comfort Is Our Top Priority For You</div>
+                <p class="sub-heading paragraph-md" data-aos="fade-left" data-aos-duration="900">We guarantee that the products we sell will make our customers
                     happy because we are very concerned about our consumer satisfaction
                 </p>
             </div>
             <div class="benefits__content">
-                <div class="benefits__content-item">
+                <div class="benefits__content-item" data-aos="fade-right" data-aos-duration="900">
                     <div class="icon">
                         <img src="img/coin.svg" alt="coin icon" class="icon_icon">
                     </div>
@@ -410,7 +411,7 @@
                             quality we provide</p>
                     </div>
                 </div>
-                <div class="benefits__content-item">
+                <div class="benefits__content-item" data-aos="fade-up" data-aos-duration="900">
                     <div class="icon">
                         <img src="img/like-shapes.svg" alt="like icon" class="icon_icon">
                     </div>
@@ -420,7 +421,7 @@
                             in the relevant government</p>
                     </div>
                 </div>
-                <div class="benefits__content-item">
+                <div class="benefits__content-item" data-aos="fade-left" data-aos-duration="900">
                     <div class="icon">
                         <img src="img/people.svg" alt="people icon" class="icon_icon">
                     </div>
@@ -435,11 +436,11 @@
 
         <section class="categories">
             <div class="categories__heading">
-                <div class="heading heading-2">Featured Categories</div>
-                <a href="#" class="paragraph paragraph-small--bold">Browse All Featured <span>&rarr;</span></a>
+                <div class="heading heading-2" data-aos="fade-right" data-aos-duration="900">Featured Categories</div>
+                <a href="#" class="paragraph paragraph-small--bold" data-aos="fade-left" data-aos-duration="900">Browse All Featured <span>&rarr;</span></a>
             </div>
             <div class="categories__content">
-                <div class="categories__content-item">
+                <div class="categories__content-item" data-aos="fade-right" data-aos-duration="900">
                     <div class="content">
                         <div class="content__text">
                             <div class="icon">
@@ -458,7 +459,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="categories__content-item">
+                <div class="categories__content-item" data-aos="fade-up" data-aos-duration="900">
                     <div class="content">
                         <div class="content__text">
                             <div class="icon">
@@ -477,7 +478,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="categories__content-item">
+                <div class="categories__content-item" data-aos="fade-left" data-aos-duration="900">
                     <div class="content">
                         <div class="content__text">
                             <div class="icon">
@@ -501,31 +502,34 @@
 
         <section class="cities">
             <div class="cities__heading">
-                <div class="heading heading-2">Explore Cities</div>
-                <a href="#" class="paragraph paragraph-small--bold">Browse All Ciities <span>&rarr;</span></a>
+                <div class="heading heading-2" data-aos="fade-right" data-aos-duration="900">Explore Cities</div>
+                <a href="#" class="paragraph paragraph-small--bold" data-aos="fade-left" data-aos-duration="900">Browse All Ciities <span>&rarr;</span></a>
             </div>
             <div class="cities__content">
-                <div class="cities__content-item">
+                <div class="cities__content-item"data-aos="fade-right" data-aos-duration="900">
                     <img src="img/city1.png" alt="city 1" class="cities-img">
                     <div class="text-wrapper">
                         <h1 class="heading heading-6">Pasadena, Oklahoma</h1>
-                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon" class="listings-icon"></span>100+
+                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon"
+                                    class="listings-icon"></span>100+
                             listings</p>
                     </div>
                 </div>
-                <div class="cities__content-item">
+                <div class="cities__content-item" data-aos="fade-up" data-aos-duration="900">
                     <img src="img/city2.png" alt="city 2" class="cities-img">
                     <div class="text-wrapper">
                         <h1 class="heading heading-6">Lafayette, California</h1>
-                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon" class="listings-icon"></span>100+
+                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon"
+                                    class="listings-icon"></span>100+
                             listings</p>
                     </div>
                 </div>
-                <div class="cities__content-item">
+                <div class="cities__content-item" data-aos="fade-left" data-aos-duration="900">
                     <img src="img/city3.png" alt="city 3" class="cities-img">
                     <div class="text-wrapper">
                         <h1 class="heading heading-6">New York</h1>
-                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon" class="listings-icon"></span>100+
+                        <p class="listings font-l"><span><img src="img/house.svg" alt="house icon"
+                                    class="listings-icon"></span>100+
                             listings</p>
                     </div>
                 </div>
@@ -534,10 +538,10 @@
 
         <section class="agents">
             <div class="agents__heading">
-                <div class="heading heading-2">Meet Our Agents</div>
-                <a href="#" class="paragraph paragraph-small--bold">Browse All Agents<span> &rarr;</span></a>
+                <div class="heading heading-2" data-aos="fade-right" data-aos-duration="900">Meet Our Agents</div>
+                <a href="#" class="paragraph paragraph-small--bold" data-aos="fade-left" data-aos-duration="900">Browse All Agents<span> &rarr;</span></a>
             </div>
-            <div class="agents__content">
+            <div class="agents__content" data-aos="zoom-in" data-aos-duration="900">
                 <div class="agents__content-item">
                     <div class="content-left">
                         <div class="text-wrapper">
@@ -881,6 +885,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
