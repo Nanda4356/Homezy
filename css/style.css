@@ -393,7 +393,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 17rem 13% 16rem 13%;
+  padding: 17rem 12% 16rem 12%;
 }
 @media only screen and (max-width: 62.5em) {
   .hero {
@@ -1764,7 +1764,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .agents__content-item .content-left .icon {
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 }
 .agents__content-item .content-left .icon-wrapper {
@@ -1797,8 +1797,8 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .agents__content-item .content-left .icon-wrapper .icon-social {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 .agents__content-item .content-right {
@@ -1812,10 +1812,12 @@ main {
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-position: top;
   aspect-ratio: 1/1;
   display: block;
+  display: flex;
+  align-items: flex-end;
 }
 @media only screen and (max-width: 75em) {
   .agents__content-item .content-right .picture {
