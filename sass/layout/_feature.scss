@@ -3,10 +3,9 @@
 
 .featured {
     padding: 17rem 13% 5rem 13%;
-    
+
     @media only screen and (max-width: $bp-small) {
         padding: 0 8% 0 8%;
-        overflow: clip;
     }
     &__heading {
         display: flex;
@@ -27,7 +26,7 @@
             line-height: 1.1;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 5rem;
+                font-size: 3.2rem;
             }
         }
 
@@ -37,19 +36,25 @@
             line-height: 1.1;
 
             @media only screen and (max-width: $bp-small) {
-                font-size: 3rem;
+                font-size: 1.8rem;
             }
         }
     }
 
     &__card {
+        @media only screen and (max-width: $bp-xlargest) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media only screen and (max-width: $bp-desktop) {
+            grid-template-columns: repeat(auto-fit, minmax(34.8rem, 1fr));
+        }
         max-width: 100%;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(34.8rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
         padding-top: 5rem;
@@ -122,19 +127,25 @@
                     left: -1.5rem;
                 }
 
+                @media only screen and (max-width: $bp-small) {
+                    top: 4%;
+                    left: -1rem;
+                }
+
                 .badge {
-                    @media only screen and (max-width: $bp-largest) {
-                        width: 15rem;
-                    }
-                    @media only screen and (max-width: $bp-medium) {
-                        width: 20rem;
+                    @media only screen and (max-width: $bp-small) {
+                        width: 11.3rem;
                     }
                 }
             }
             &-content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 4rem;
                 width: 100%;
                 box-sizing: border-box;
-                margin: 3.2rem 2.4rem;
+                margin: 2.4rem 3.2rem;
 
                 @media only screen and (max-width: $bp-medium) {
                     margin: 0;
@@ -146,10 +157,28 @@
                     justify-items: center;
                     align-items: center;
 
+                    @media only screen and (max-width: $bp-small) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 4rem;
+                    }
+
                     .price {
                         font-family: "Syne", sans-serif;
                         display: flex;
                         align-items: flex-end;
+
+                        &__heading {
+                            font-variant-numeric: lining-nums;
+                            numerics-spacing: proportional-nums;
+                            @media only screen and (max-width: $bp-small) {
+                                font-size: 4rem;
+                                line-height: 4rem;
+                                letter-spacing: -3%;
+                                font-variant-numeric: lining-nums;
+                                numerics-spacing: proportional-nums;
+                            }
+                        }
                     }
 
                     .agent__info {
@@ -219,21 +248,34 @@
                 .main-text {
                     display: flex;
                     flex-direction: column;
+                    gap: 4rem;
 
                     &__heading {
-                        margin-bottom: 3rem;
                         .heading {
                             font-family: "Syne", sans-serif;
                             margin-bottom: 0.5rem;
+                            font-size: 2.4rem;
                         }
 
                         .location {
                             display: flex;
+                            width: 100%;
+                            align-items: center;
                             gap: 1.5rem;
+
+                            &-paragraph {
+                                @media only screen and (max-width: $bp-small) {
+                                    font-size: 1.6rem;
+                                }
+                            }
 
                             &-icon {
                                 @media only screen and (max-width: $bp-largest) {
-                                    width: 3.5%;
+                                    display: flex;
+                                    align-items: center;
+                                    max-width: 2rem;
+                                    width: 100%;
+                                    height: 100%;
                                 }
                             }
                         }
@@ -243,19 +285,29 @@
                             text-decoration: none;
                             color: $color-dark-100;
                             font-weight: 700;
+
+                            @media only screen and (max-width: $bp-small) {
+                                font-size: 1.8rem;
+                            }
                         }
                     }
                 }
                 .features {
-                    display: flex;
+                    display: grid;
                     justify-content: space-between;
                     align-items: center;
-                    margin-top: 4rem;
                     padding: 2rem;
+                    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+                    grid-template-rows: 1fr;
                     background-color: $color-lavender-20;
                     border-radius: 1.5rem;
 
+                    @media only screen and (max-width: $bp-small) {
+                       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                    }
+
                     &__item {
+                        grid-column: 1fr;
                         width: 100%;
                         height: auto;
                         box-sizing: border-box;
@@ -266,10 +318,18 @@
                         @media only screen and (max-width: $bp-medium) {
                             gap: 1.5rem;
                         }
+                        @media only screen and (max-width: $bp-small) {
+                           justify-content: flex-start;
+                           align-items: flex-start;
+                        }
 
                         .heading {
                             @media only screen and (max-width: $bp-medium) {
                                 font-size: 2rem;
+                            }
+                            @media only screen and (max-width: $bp-small) {
+                                font-size: 1.6rem;
+                                letter-spacing: 0;
                             }
                         }
 
@@ -286,6 +346,10 @@
                                     width: 4rem;
                                     height: 4rem;
                                 }
+                                @media only screen and (max-width: $bp-small) {
+                                    width: 2rem;
+                                    height: 2rem;
+                                }
                             }
                         }
 
@@ -295,6 +359,9 @@
 
                             @media only screen and (max-width: $bp-medium) {
                                 font-size: 2.3rem;
+                            }
+                            @media only screen and (max-width: $bp-small) {
+                                font-size: 1.4rem;
                             }
                         }
                     }
@@ -414,7 +481,7 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 3rem;
+                    gap: 4rem;
                     border-top: 1px solid $color-dark-20;
 
                     &__item {

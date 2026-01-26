@@ -1,9 +1,11 @@
 @use "../abstracts/variables" as *;
 // media query
+$bp-xlargest: 160em;
+$bp-desktop: 120em;
 $bp-largest: 75em;
 $bp-large: 62.5em;
 $bp-medium: 50em;
-$bp-small: 37.5em;
+$bp-small: 30em;
 
 *,
 *::before,
@@ -17,16 +19,6 @@ html {
     font-size: 62.5%;
     font-family: "Hanken Grotesk", sans-serif;
     background-color: rgba($color-lavender-20, 0.4);
-
-        @media only screen and (max-width: $bp-largest) {
-        font-size: 50%;
-    }
-        @media only screen and (max-width: $bp-largest) {
-        font-size: 40%;
-    }
-        @media only screen and (max-width: $bp-medium) {
-        font-size: 30%;
-    }
 }
 
 body {
@@ -36,4 +28,3 @@ body {
 main{
     overflow: hidden;
 }
-

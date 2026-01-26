@@ -1,123 +1,173 @@
 @use "../abstracts/variables" as *;
 @use "../base/base" as *;
 
-.cities {
+.cta {
+    position: relative;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 13% 5rem 13%;
-    overflow: hidden;
+    align-items: center;
+    padding: 5rem 13% 5rem 13%;
 
     @media only screen and (max-width: $bp-small) {
-        padding: 0 8% 0 8%;
-    }
-
-    &__heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media only screen and (max-width: $bp-small) {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 1.5rem;
-        }
-
-        .heading {
-            font-family: "Syne", sans-serif;
-            @media only screen and (max-width: $bp-small) {
-                font-size: 5rem;
-            }
-        }
-
-        .paragraph {
-            text-decoration: none;
-            color: $color-dark-100;
-
-            @media only screen and (max-width: $bp-small) {
-                font-size: 3rem;
-            }
-        }
+        padding: 5rem 8% 5rem 8%;
     }
 
     &__content {
-        max-width: 100%;
-        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-lavender-80;
+        border-radius: 1.5rem;
         width: 100%;
-        padding: 5rem 0 10rem 0;
-        height: auto;
-        box-sizing: border-box;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        grid-template-rows: 1fr;
-        gap: 4rem;
+        height: 100%;
+        padding: 5rem;
+        gap: 2rem;
+        border: 1px solid $color-dark-100;
+        position: relative;
 
         @media only screen and (max-width: $bp-small) {
-            grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
-        }
-
-        &-item {
-            gap: 4rem;
-            position: relative;
-            background-color: #fff;
-            border-radius: 1.5rem;
-            border: 0.2rem solid $color-lavender-20;
-            grid-column: 1fr;
             width: 100%;
             height: auto;
-            box-sizing: border-box;
+            padding-bottom: 45rem;
+            gap: 5rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 55%;
+
+            background-image: url("../../img/pattern-white.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            pointer-events: none;
+            z-index: 1;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: -50rem;
+            }
+        }
+
+        &-text {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
-
-            .cities-img {
-                width: 100%;
-                border-top-left-radius: 1.5rem;
-                border-top-right-radius: 1.5rem;
-                object-fit: cover;
-                aspect-ratio: 1 / 1;
-
-                overflow: hidden;
+            max-width: 40rem;
+            width: 100%;
+            gap: 2rem;
+            z-index: 2;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 5rem;
+                max-width: 100%;
             }
 
-            .text-wrapper {
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                gap: 1.2rem;
+            .heading {
+                font-family: "Syne", sans-serif;
+                color: #fff;
+                font-weight: 600;
 
-                .heading {
-                    font-family: "Syne", sans-serif;
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 6rem;
+                    line-height: 1;
+                }
+            }
+
+            .paragraph {
+                color: $color-lavender-20;
+                font-weight: 300;
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 3.5rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        &-form {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            max-width: 45rem;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid $color-lavender-40;
+
+            z-index: 2;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                max-width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            .input {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border: none;
+                font-family: "Hanken Grotesk", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 300;
+                width: 100%;
+                padding-right: 2rem;
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 2rem;
+                }
+
+                @media only screen and (max-width: $bp-small) {
+                    padding: 3rem;
+                    width: 100%;
+                    background-color: #fff;
+                    border: 1px solid $color-lavender-40;
+                    border-radius: 1.5rem;
+                    font-size: 2.5em;
+                }
+
+                &::placeholder {
+                    color: $color-dark-20;
+
+                    @media only screen and (max-width: $bp-largest) {
+                        font-size: 2rem;
+                    }
                     @media only screen and (max-width: $bp-small) {
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                     }
                 }
 
-                .listings {
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    color: $color-dark-60;
+                &:focus {
+                    outline: none;
+                }
+            }
 
-                    @media only screen and (max-width: $bp-small) {
-                        font-size: 2rem;
-                    }
-
-                    &-icon {
-                        max-width: 5rem;
-                        width: 100%;
-
-                        @media only screen and (max-width: $bp-largest) {
-                            max-width: 2.7rem;
-                        }
-                        @media only screen and (max-width: $bp-small) {
-                            max-width: 3.6rem;
-                        }
-                    }
+            .btn-cta {
+                @media only screen and (max-width: $bp-largest) {
+                    padding: 2rem;
+                    font-size: 2rem;
+                }
+                @media only screen and (max-width: $bp-large) {
+                    padding: 2rem 0 2rem 0;
+                    font-size: 2rem;
+                }
+                @media only screen and (max-width: $bp-small) {
+                    padding: 3rem;
+                    font-size: 2.6rem;
                 }
             }
         }
