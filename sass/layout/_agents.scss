@@ -125,7 +125,7 @@
                     width: 100%;
 
                     @media only screen and (max-width: $bp-small) {
-                        gap: 1.8rem;
+                        gap: 1.5rem;
                     }
 
                     &-wrapper {
@@ -154,8 +154,8 @@
                             }
 
                             @media only screen and (max-width: $bp-small) {
-                                width: 2.5rem;
-                                height: 2.5rem;
+                                width: 2rem;
+                                height: 2rem;
                             }
                         }
                     }

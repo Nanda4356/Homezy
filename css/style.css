@@ -1258,6 +1258,11 @@ main {
   grid-template-rows: 1fr;
   gap: 4rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .benefits__content {
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  }
+}
 .benefits__content-item {
   display: flex;
   flex-direction: column;
@@ -1759,7 +1764,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .agents__content-item .content-left .icon {
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
 }
 .agents__content-item .content-left .icon-wrapper {
@@ -1792,8 +1797,8 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .agents__content-item .content-left .icon-wrapper .icon-social {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 .agents__content-item .content-right {
@@ -2089,6 +2094,11 @@ main {
 .cta__content-form .input::placeholder {
   color: #D6D7E0;
 }
+@media only screen and (max-width: 75em) {
+  .cta__content-form .input::placeholder {
+    font-size: 2rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .cta__content-form .input::placeholder {
     font-size: 2.5rem;
@@ -2096,6 +2106,12 @@ main {
 }
 .cta__content-form .input:focus {
   outline: none;
+}
+@media only screen and (max-width: 75em) {
+  .cta__content-form .btn-cta {
+    padding: 2rem 0 2rem 0;
+    font-size: 2rem;
+  }
 }
 
 .footer {
@@ -2388,7 +2404,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .btn-secondary {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .btn-secondary:hover {

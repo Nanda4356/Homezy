@@ -137,13 +137,25 @@
 
                 &::placeholder {
                     color: $color-dark-20;
+                    
+                    @media only screen and (max-width: $bp-largest) {
+                        font-size: 2rem;
+                    }
                     @media only screen and (max-width: $bp-small) {
                         font-size: 2.5rem;
                     }
+
                 }
 
                 &:focus {
                     outline: none;
+                }
+            }
+
+            .btn-cta {
+                @media only screen and (max-width: $bp-largest) {
+                    padding: 2rem 0 2rem 0;
+                    font-size: 2rem;
                 }
             }
         }
