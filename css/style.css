@@ -36,6 +36,10 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  overflow: hidden;
+}
+
 .heading-1 {
   font-size: 7.2rem;
   line-height: 8.8rem;
@@ -389,20 +393,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 17rem 8% 16rem 13%;
-  overflow: hidden;
-}
-@media only screen and (max-width: 75em) {
-  .hero {
-    padding: 17rem 4% 16rem 6.5%;
-  }
+  padding: 17rem 13% 16rem 13%;
 }
 @media only screen and (max-width: 62.5em) {
   .hero {
     flex-direction: column;
     align-items: flex-start;
     gap: 10rem;
-    padding: 14rem 8% 12rem 10%;
   }
 }
 .hero::before {
@@ -778,19 +775,26 @@ body {
   display: block;
 }
 
+.featured {
+  padding: 17rem 13% 5rem 13%;
+}
+@media only screen and (max-width: 37.5em) {
+  .featured {
+    padding: 0 8% 0 8%;
+    overflow: clip;
+  }
+}
 .featured__heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 17rem 13% 5rem 13%;
 }
 @media only screen and (max-width: 37.5em) {
   .featured__heading {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 17rem 8% 5rem 8%;
     gap: 1.5rem;
   }
 }
@@ -817,7 +821,6 @@ body {
 .featured__card {
   max-width: 100%;
   width: 100%;
-  padding: 0 13% 0 13%;
   height: 100%;
   box-sizing: border-box;
   margin: 0 auto;
@@ -825,11 +828,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(34.8rem, 1fr));
   grid-template-rows: 1fr;
   gap: 4rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .featured__card {
-    padding: 0 8% 0 8%;
-  }
+  padding-top: 5rem;
 }
 .featured__card-top, .featured__card-top-image, .featured__card-top-content {
   min-width: 0;
@@ -855,10 +854,12 @@ body {
   height: auto;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 @media only screen and (max-width: 50em) {
   .featured__card-top-image {
     width: 100%;
+    overflow: hidden;
   }
 }
 .featured__card-top-image .picture {
@@ -871,12 +872,14 @@ body {
   position: relative;
   display: block;
   object-fit: cover;
+  overflow: hidden;
 }
 @media only screen and (max-width: 50em) {
   .featured__card-top-image .picture {
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 0;
     border-top-right-radius: 1.5rem;
+    overflow: hidden;
   }
 }
 .featured__card-top-badge {
@@ -956,11 +959,13 @@ body {
   border-radius: 100%;
   object-fit: cover;
   align-items: flex-end;
+  overflow: hidden;
 }
 @media only screen and (max-width: 50em) {
   .featured__card-top-content .heading .agent__info-picture .picture {
     width: 6rem;
     height: 6rem;
+    overflow: hidden;
   }
 }
 .featured__card-top-content .heading .agent__info-text {
@@ -1090,6 +1095,7 @@ body {
   display: block;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+  overflow: hidden;
 }
 .featured__card-bottom-badge {
   position: absolute;
@@ -1248,7 +1254,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-template-rows: 1fr;
   gap: 4rem;
 }
@@ -1267,12 +1273,6 @@ body {
   height: auto;
   box-sizing: border-box;
   padding: 3.5rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .benefits__content-item {
-    padding: 5rem 10rem 10rem 5rem;
-    gap: 10rem;
-  }
 }
 .benefits__content-item .icon {
   background: #E2D4FF;
@@ -1333,6 +1333,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 13% 8rem 13%;
+  overflow: hidden;
 }
 @media only screen and (max-width: 37.5em) {
   .categories {
@@ -1627,6 +1628,7 @@ body {
   justify-content: center;
   width: 100%;
   padding: 0 13% 5rem 13%;
+  overflow: hidden;
 }
 @media only screen and (max-width: 37.5em) {
   .agents {
@@ -1832,6 +1834,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .testimonials {
     padding: 0 8% 5rem 8%;
+    overflow: auto;
   }
 }
 .testimonials__heading {
@@ -1977,7 +1980,6 @@ body {
   .cta__content {
     width: 100%;
     height: auto;
-    overflow: hidden;
     padding-bottom: 45rem;
     gap: 5rem;
   }

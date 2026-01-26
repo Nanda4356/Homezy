@@ -2,18 +2,22 @@
 @use "../base/base" as *;
 
 .featured {
+    padding: 17rem 13% 5rem 13%;
+    
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 8% 0 8%;
+        overflow: clip;
+    }
     &__heading {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 17rem 13% 5rem 13%;
 
         @media only screen and (max-width: $bp-small) {
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            padding: 17rem 8% 5rem 8%;
             gap: 1.5rem;
         }
 
@@ -41,7 +45,6 @@
     &__card {
         max-width: 100%;
         width: 100%;
-        padding: 0 13% 0 13%;
         height: 100%;
         box-sizing: border-box;
         margin: 0 auto;
@@ -49,10 +52,7 @@
         grid-template-columns: repeat(auto-fit, minmax(34.8rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
-
-        @media only screen and (max-width: $bp-small) {
-            padding: 0 8% 0 8%;
-        }
+        padding-top: 5rem;
 
         &-top,
         &-top-image,
@@ -80,9 +80,11 @@
                 height: auto;
                 box-sizing: border-box;
                 position: relative;
+                overflow: hidden;
 
                 @media only screen and (max-width: $bp-medium) {
                     width: 100%;
+                    overflow: hidden;
                 }
 
                 .picture {
@@ -95,11 +97,13 @@
                     position: relative;
                     display: block;
                     object-fit: cover;
+                    overflow: hidden;
 
                     @media only screen and (max-width: $bp-medium) {
                         border-top-left-radius: 1.5rem;
                         border-bottom-left-radius: 0;
                         border-top-right-radius: 1.5rem;
+                        overflow: hidden;
                     }
                 }
             }
@@ -176,10 +180,12 @@
                                 border-radius: 100%;
                                 object-fit: cover;
                                 align-items: flex-end;
+                                overflow: hidden;
 
                                 @media only screen and (max-width: $bp-medium) {
                                     width: 6rem;
                                     height: 6rem;
+                                    overflow: hidden;
                                 }
                             }
                         }
@@ -324,6 +330,7 @@
                     display: block;
                     border-top-left-radius: 1.5rem;
                     border-top-right-radius: 1.5rem;
+                    overflow: hidden;
                 }
             }
             &-badge {

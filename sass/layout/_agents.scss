@@ -7,6 +7,7 @@
     justify-content: center;
     width: 100%;
     padding: 0 13% 5rem 13%;
+    overflow: hidden;
 
     @media only screen and (max-width: $bp-small) {
         padding: 0 8% 5rem 8%;

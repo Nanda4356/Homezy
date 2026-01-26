@@ -6,18 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 17rem 8% 16rem 13%;
-  overflow: hidden;
-
-  @media only screen and (max-width: $bp-largest) {
-    padding: 17rem 4% 16rem 6.5%;
-  }
+  padding: 17rem 13% 16rem 13%;
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
     align-items: flex-start;
     gap: 10rem;
-    padding: 14rem 8% 12rem 10%;
   }
 
   &::before {

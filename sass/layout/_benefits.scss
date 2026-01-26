@@ -58,7 +58,7 @@
         box-sizing: border-box;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
 
@@ -78,10 +78,7 @@
             box-sizing: border-box;
             padding: 3.5rem;
 
-            @media only screen and (max-width: $bp-small) {
-                padding: 5rem 10rem 10rem 5rem;
-                gap: 10rem;
-            }
+
 
             .icon {
                 background: $color-lavender-40;
