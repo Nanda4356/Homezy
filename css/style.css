@@ -2084,6 +2084,11 @@ main {
   width: 100%;
   padding-right: 2rem;
 }
+@media only screen and (max-width: 75em) {
+  .cta__content-form .input {
+    font-size: 2rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .cta__content-form .input {
     padding: 3rem;
@@ -2091,6 +2096,7 @@ main {
     background-color: #fff;
     border: 1px solid #E2D4FF;
     border-radius: 1.5rem;
+    font-size: 2.5em;
   }
 }
 .cta__content-form .input::placeholder {
@@ -2111,8 +2117,20 @@ main {
 }
 @media only screen and (max-width: 75em) {
   .cta__content-form .btn-cta {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .cta__content-form .btn-cta {
     padding: 2rem 0 2rem 0;
     font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .cta__content-form .btn-cta {
+    padding: 3rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -2401,11 +2419,15 @@ main {
 }
 @media only screen and (max-width: 50em) {
   .btn-secondary {
+    max-width: 100%;
+    width: 100%;
     padding: 3rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .btn-secondary {
+    max-width: 100%;
+    width: 100%;
     font-size: 2rem;
   }
 }
