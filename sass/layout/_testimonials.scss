@@ -21,7 +21,7 @@
         margin: 0 auto;
 
         .heading {
-            font-size: 5rem;
+            font-size: 3.2rem;
         }
     }
 
@@ -61,7 +61,7 @@
 
             &-stars {
                 display: flex;
-                gap: 1rem;
+                gap: 1.2rem;
                 .star {
                     width: 1.7rem;
                     height: 1.7rem;
@@ -80,9 +80,9 @@
                     display: block;
 
                     @media only screen and (max-width: $bp-small) {
-                        font-size: 3rem;
+                        font-size: 2rem;
                         width: 100%;
-                        line-height: 1.5;
+                        line-height: 3rem;
                     }
                 }
             }
@@ -95,17 +95,16 @@
                     @media only screen and (max-width: $bp-small) {
                         display: flex;
                         flex-direction: column;
-                        gap: 3.5rem;
                     }
                     .name {
                         @media only screen and (max-width: $bp-small) {
-                            font-size: 4rem;
+                            font-size: 2rem;
                         }
                     }
 
                     .position {
                         @media only screen and (max-width: $bp-small) {
-                            font-size: 3rem;
+                            font-size: 1.6rem;
                         }
                     }
                 }
