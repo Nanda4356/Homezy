@@ -8,9 +8,14 @@
   justify-content: space-between;
   padding: 17rem 12% 16rem 12%;
 
+  @media only screen and (max-width: $bp-largest) {
+    padding: 17rem 5% 16rem 5%;
+  }
+
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10rem;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -45,6 +50,10 @@
     gap: 4rem;
     z-index: 2;
 
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      justify-content: center;
+    }
     @media only screen and (max-width: $bp-medium) {
       width: 100%;
       justify-content: center;
@@ -54,6 +63,15 @@
       display: flex;
       flex-direction: column;
       gap: 4rem;
+
+      @media only screen and (max-width: $bp-largest) {
+        max-width: 50rem;
+        width: 100%;
+      }
+      @media only screen and (max-width: $bp-large) {
+        max-width: 100rem;
+        width: 100%;
+      }
 
       @media only screen and (max-width: $bp-medium) {
         width: 100%;
@@ -72,10 +90,8 @@
         line-height: 1.2;
 
         @media only screen and (max-width: $bp-largest) {
-          max-width: 100%;
-        }
-        @media only screen and (max-width: $bp-largest) {
           font-size: 4.2rem;
+          max-width: 100%;
         }
       }
 
@@ -101,6 +117,7 @@
     &-cta {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 3.2rem;
       padding: 1.6rem;
       border-radius: 1.5rem;
@@ -121,6 +138,11 @@
         align-items: center;
         justify-content: center;
         background-color: $color-lavender-40;
+
+        @media only screen and (max-width: $bp-large) {
+          width: 5rem;
+          height: 5rem;
+        }
 
         @media only screen and (max-width: $bp-small) {
           width: 4rem;
@@ -148,8 +170,8 @@
           align-items: center;
 
           @media only screen and (max-width: $bp-large) {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
           }
 
           @media only screen and (max-width: $bp-small) {
@@ -161,16 +183,11 @@
 
       .text-wrapper {
         .heading {
-          @media only screen and (max-width: $bp-small) {
-            font-size: 1.4rem;
-          }
+          font-size: 1.4rem;
         }
         .paragraph {
           color: $color-dark-100;
-
-          @media only screen and (max-width: $bp-small) {
-            font-size: 1.6rem;
-          }
+          font-size: 1.6rem;
         }
       }
       .btn-wrapper {
@@ -181,6 +198,12 @@
         }
 
         .btn-cta {
+          @media only screen and (max-width: $bp-large) {
+            padding: 1.8rem 4rem 1.8rem 4rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.2rem;
+          }
           @media only screen and (max-width: $bp-small) {
             padding: 1.8rem 4rem 1.8rem 4rem;
             font-size: 1.8rem;
@@ -234,12 +257,12 @@
       @media only screen and (max-width: $bp-large) {
         top: 0;
         right: 50%;
-        max-width: 20%;
+        max-width: 20rem;
       }
       @media only screen and (max-width: $bp-medium) {
         top: 0;
         right: 50%;
-        max-width: 20%;
+        max-width: 20rem;
       }
 
       @media only screen and (max-width: $bp-small) {
@@ -302,13 +325,17 @@
 
       @media only screen and (max-width: $bp-large) {
         top: 3rem;
-        right: 35%;
+        left: 38rem;
         max-width: 27rem;
         width: 100%;
       }
+      @media only screen and (max-width: $bp-medium) {
+        top: 3rem;
+        left: 30rem;
+      }
       @media only screen and (max-width: $bp-small) {
         top: 3rem;
-        right: 10%;
+        left: 15rem;
         max-width: 27rem;
         width: 100%;
       }
@@ -357,6 +384,11 @@
         width: 100%;
       }
 
+      @media only screen and (max-width: $bp-largest) {
+        left: 24rem;
+      }
+
+      
       position: absolute;
       top: -6rem;
       right: 1rem;
@@ -369,9 +401,15 @@
       z-index: 1;
 
       @media only screen and (max-width: $bp-large) {
-        max-width: 20%;
+        max-width: 20rem;
         top: 40%;
-        right: 28%;
+        left: 48rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 20rem;
+        width: 100%;
+        left: 40rem;
       }
 
       @media only screen and (max-width: $bp-small) {

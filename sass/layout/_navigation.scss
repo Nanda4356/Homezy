@@ -21,7 +21,7 @@
         justify-content: center;
         align-items: center;
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             display: none;
         }
     }
@@ -35,7 +35,7 @@
         padding: 0 20px;
         display: none;
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             padding: 0;
             display: flex;
             justify-content: center;
@@ -72,7 +72,7 @@
             color: $color-dark-100;
             font-family: "Syne", sans-serif;
 
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 display: flex;
                 justify-content: flex-start;
                 gap: 2rem;
@@ -87,7 +87,7 @@
         .label {
             display: none;
 
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
@@ -95,7 +95,7 @@
             }
         }
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             flex-direction: column;
             align-items: flex-start;
 
@@ -123,7 +123,7 @@
             justify-content: center;
             width: 100%;
 
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 justify-content: flex-start;
                 border-bottom: 2px solid $color-lavender-40;
                 padding: 2rem 0;
@@ -150,7 +150,7 @@
                     color: $color-lavender-80;
                 }
 
-                @media only screen and (max-width: $bp-medium) {
+                @media only screen and (max-width: $bp-large) {
                     font-size: 2rem;
                 }
 
@@ -191,7 +191,7 @@
                     }
                 }
 
-                @media only screen and (max-width: $bp-medium) {
+                @media only screen and (max-width: $bp-large) {
                     font-size: 3rem;
                 }
             }
@@ -211,7 +211,7 @@
                 pointer-events: none;
                 transition: all 0.4s ease;
 
-                @media only screen and (max-width: $bp-medium) {
+                @media only screen and (max-width: $bp-large) {
                     position: static;
                     transform: none;
                     width: 100%;
@@ -228,7 +228,7 @@
                 background-color: #fff;
                 box-shadow: 0 0 0.5rem $color-dark-20;
 
-                @media only screen and (max-width: $bp-medium) {
+                @media only screen and (max-width: $bp-large) {
                     width: 100%;
                     flex-direction: column;
                     margin-top: 1.5rem;
@@ -256,7 +256,7 @@
         .btn-list {
             display: none;
 
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -265,7 +265,7 @@
     }
 
     #sidebar-active:checked ~ .navigation__list {
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             right: 0;
         }
     }
