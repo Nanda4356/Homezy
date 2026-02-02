@@ -16,6 +16,13 @@
     padding: 2rem 13% 1rem 13%;
     background-color: $background-color;
 
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem;
+    }
+
     .btn-nonlist {
         display: flex;
         justify-content: center;
@@ -41,6 +48,10 @@
             justify-content: center;
             align-items: center;
         }
+        @media only screen and (max-width: $bp-small) {
+            max-width: 2rem;
+            width: 100%;
+        }
     }
 
     .navigation-icon {
@@ -51,9 +62,28 @@
         color: $color-dark-100;
         font-family: "Syne", sans-serif;
 
+        .logo {
+            @media only screen and (max-width: $bp-large) {
+                max-width: 4rem;
+                width: 100%;
+            }
+            @media only screen and (max-width: $bp-small) {
+                max-width: 2rem;
+                width: 100%;
+            }
+        }
+
         .text {
             font-weight: 600;
             display: flex;
+
+            @media only screen and (max-width: $bp-large) {
+                max-width: 4rem;
+                width: 100%;
+            }
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -61,7 +91,14 @@
         list-style: none;
         display: flex;
         align-items: center;
+        padding: 2rem;
         gap: 6.4rem;
+
+        @media only screen and (max-width: $bp-large) {
+            gap: 3rem;
+            overflow-y: auto;
+            height: 100vh;
+        }
 
         .navigation-icon-list {
             display: none;
@@ -78,9 +115,19 @@
                 gap: 2rem;
             }
 
+            @media only screen and (max-width: $bp-small) {
+                gap: 0.5rem;
+            }
+
+            .logo {
+                width: 2rem;
+                max-width: 100%;
+            }
+
             .text-list {
                 font-weight: 600;
                 display: flex;
+                font-size: 2rem;
             }
         }
 
@@ -155,7 +202,7 @@
                 }
 
                 @media only screen and (max-width: $bp-small) {
-                    font-size: 2.8rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -192,13 +239,21 @@
                 }
 
                 @media only screen and (max-width: $bp-large) {
-                    font-size: 3rem;
+                    font-size: 2rem;
+                }
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 1.5rem;
                 }
             }
 
             .arrow {
                 display: flex;
                 transition: transform 0.4s ease;
+                @media only screen and (max-width: $bp-small) {
+                    max-width: 1rem;
+                    width: 100%;
+                }
             }
 
             .dropdown__wrapper {
@@ -260,6 +315,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            @media only screen and (max-width: $bp-small) {
+                padding: 1rem;
+                font-size: 1.5rem;
             }
         }
     }

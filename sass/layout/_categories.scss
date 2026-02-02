@@ -10,8 +10,16 @@
     padding: 0 13% 8rem 13%;
     overflow: hidden;
 
+    @media only screen and (max-width: $bp-largest) {
+        padding: 16rem 5% 16rem 5%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 5rem 5% 0 5%;
+    }
+
     @media only screen and (max-width: $bp-small) {
-        padding: 0 8% 0 8%;
+        padding: 0 2rem 0 2rem;
     }
 
     &__heading {
@@ -29,6 +37,9 @@
         .heading {
             font-family: "Syne", sans-serif;
 
+            @media only screen and (max-width: $bp-large) {
+                font-size: 4rem;
+            }
             @media only screen and (max-width: $bp-small) {
                 font-size: 3.2rem;
             }
@@ -37,6 +48,10 @@
         .paragraph {
             text-decoration: none;
             color: $color-dark-100;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 2rem;
+            }
             @media only screen and (max-width: $bp-small) {
                 font-size: 1.8rem;
             }
@@ -54,10 +69,6 @@
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
-
-        @media only screen and (max-width: $bp-small) {
-            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-        }
 
         &-item {
             gap: 4rem;
@@ -101,8 +112,8 @@
                             }
 
                             @media only screen and (max-width: $bp-small) {
-                                max-width: 3.2rem;
-                                max-height: 3.2rem;
+                                max-width: 3rem;
+                                max-height: 3rem;
                             }
                         }
                     }
@@ -122,20 +133,16 @@
                             font-family: "Syne", sans-serif;
 
                             @media only screen and (max-width: $bp-large) {
-                                font-size: 3.2rem;
+                                font-size: 2rem;
                             }
 
                             @media only screen and (max-width: $bp-small) {
-                                font-size: 2.6rem;
+                                font-size: 2rem;
                             }
                         }
 
                         .listings {
                             @media only screen and (max-width: $bp-large) {
-                                font-size: 1.8rem;
-                            }
-
-                            @media only screen and (max-width: $bp-small) {
                                 font-size: 1.8rem;
                             }
                         }

@@ -9,8 +9,16 @@
     padding: 0 13% 5rem 13%;
     overflow: hidden;
 
+    @media only screen and (max-width: $bp-largest) {
+        padding: 17rem 5% 16rem 5%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 2rem 5% 0 5%;
+    }
+
     @media only screen and (max-width: $bp-small) {
-        padding: 0 8% 5rem 8%;
+        padding: 0 2rem 5rem 2rem;
     }
 
     &__heading {
@@ -27,6 +35,10 @@
 
         .heading {
             font-family: "Syne", sans-serif;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 4rem;
+            }
             @media only screen and (max-width: $bp-small) {
                 font-size: 3.2rem;
             }
@@ -36,6 +48,9 @@
             text-decoration: none;
             color: $color-dark-100;
 
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2rem;
+            }
             @media only screen and (max-width: $bp-small) {
                 font-size: 1.8rem;
             }
@@ -53,9 +68,6 @@
         grid-template-columns: repeat(auto-fit, minmax(34.5rem, 1fr));
         grid-template-rows: 1fr;
         gap: 4rem;
-
-        @media only screen and (max-width: $bp-small) {
-        }
 
         &-item {
             gap: 4rem;
@@ -81,6 +93,8 @@
                     align-items: flex-start;
                     justify-content: center;
                     gap: 1.6rem;
+                    max-width: 20rem;
+                    width: 100%;
                 }
 
                 .text-wrapper {
@@ -110,9 +124,6 @@
                         @media only screen and (max-width: $bp-large) {
                             font-size: 1.8rem;
                         }
-                        @media only screen and (max-width: $bp-large) {
-                            font-size: 2.3rem;
-                        }
                         @media only screen and (max-width: $bp-small) {
                             font-size: 1.8rem;
                         }
@@ -126,7 +137,7 @@
                     width: 100%;
 
                     @media only screen and (max-width: $bp-small) {
-                        gap: 1.8rem;
+                        gap: 1rem;
                     }
 
                     &-wrapper {
@@ -136,7 +147,7 @@
                         border-radius: 50%;
 
                         @media only screen and (max-width: $bp-small) {
-                            padding: 1rem;
+                            padding: .5rem;
                         }
 
                         .icon-social {
